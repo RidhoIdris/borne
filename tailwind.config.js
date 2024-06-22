@@ -45,6 +45,20 @@ export default {
         "surface-900": "rgb(var(--surface-900))",
         "surface-950": "rgb(var(--surface-950))",
       },
+      keyframes: {
+        scaleUp: {
+          "0%": { transform: "scale(0)" },
+          "100%": { transform: "scale(1)" },
+        },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+      },
+      animation: {
+        "scale-up": "scaleUp 1s ease-out forwards",
+        "fade-in": "fadeIn 0.5s ease-out forwards",
+      },
     },
   },
   plugins: [],

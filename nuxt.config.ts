@@ -4,7 +4,12 @@ import path from "path";
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
-  modules: ["@primevue/nuxt-module", "@nuxtjs/eslint-module"],
+  modules: [
+    "@primevue/nuxt-module",
+    "@nuxtjs/eslint-module",
+    "nuxt-icons",
+    "@nuxt/image",
+  ],
   postcss: {
     plugins: {
       tailwindcss: {},
