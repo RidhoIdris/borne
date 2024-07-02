@@ -9,7 +9,7 @@
         v-for="product in Array.from({ length: 12 }, (_, i) => i + 1)"
         :key="product"
       >
-        <div class="shadow-productCard overflow-hidden rounded-[32px] bg-white">
+        <div class="overflow-hidden rounded-[32px] bg-white shadow-productCard">
           <NuxtImg
             width="320"
             height="320"
@@ -29,7 +29,7 @@
                 class="w-full border-primary text-primary"
                 label="Voir le produit"
                 icon="chevron-right"
-              ></UiButton>
+              />
             </div>
           </div>
         </div>
