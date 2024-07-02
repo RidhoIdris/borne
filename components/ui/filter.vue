@@ -24,8 +24,10 @@ const visible = ref(false);
           />
         </div>
       </template>
-      <div class="">
-        <div class="h-[10px] w-full bg-filterBorder"></div>
+      <div class="relative">
+        <div
+          class="absolute left-0 top-0 h-[10px] w-full rotate-180 bg-filterBorder"
+        ></div>
         <div
           v-for="(filter, filterIndex) in [
             'Marques',

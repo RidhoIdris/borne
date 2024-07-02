@@ -6,14 +6,14 @@
     </div>
     <div class="mt-10 grid grid-cols-3 gap-x-5 gap-y-10">
       <template
-        v-for="product in Array.from({ length: 10 }, (_, i) => i + 1)"
+        v-for="product in Array.from({ length: 12 }, (_, i) => i + 1)"
         :key="product"
       >
         <div class="shadow-productCard overflow-hidden rounded-[32px] bg-white">
           <NuxtImg
             width="320"
             height="320"
-            src="https://s3-alpha-sig.figma.com/img/6c67/0be0/c0fb8244250889a3d9f317da949214e9?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ckwaa9yrzvbm7OqvVgJiLHNWpq3OeB2wXdv0OKnQaxFZOf9cwyjrbsrji9Y8h7w5M1xcuP8iNQVjRsCDozV7Fp4V6~cFuGYyCvdGr2ILJk~S~qr3-V2F5vMRSf~fG0aop9bkI5TOLW8d0zZu5LISedsczJ2wARHNG~78iZJF1uZb6I8vARXlc7Hlb7~m0X585rgUQwV3ZXwobJNMW-07hm2A5Wi4llnbfQs0eRGEAjl0wW56deU3qNhial3EV1WmXaZNqiLxibKs0LOKGYx0NpDmERn22HwvlOd-x6EZhK98G0ej~d5rmY4rIsVDFBPl4yFE0T7GtLNKk6wIV4rfYQ__"
+            src="https://s3-alpha-sig.figma.com/img/86d8/3590/2b91b01e3b902d95b84ae261a93d5793?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=k8rtrczxQ3AlQ9ljIYLpwxyxwjJa3Moyv5IN7QTiAxrniiMYkbRKDdfhZ~l6GgBGo92gYt7YHg3NtRiZb3qNOZUTOohlwPqSr1107tuM9MEIHx6H7dGAEgZ6qQMK-f9iljoXDqDddnj21sqMZQ3orKyZiyoq1zyBto6fiQzOeVQIUQDOpG~tjrEM7B3cULUOopN9Si9NoGXhHt~G2YbBvhcWyfAvCkQmlFWzKgR4ZmNOYdTgpUYT1-bvxDJIvCakMUj7GAzFMukyhfaa81njPVoR4lCRvWTY6JCywXOGv3QZK2yI9QZjeOY35B8sfrQMDHzvtS2CJOj9QJwR7w8v4w__"
           />
           <div class="border-t border-[#939393] p-[10px] text-current-text">
             <span>Mods & boxs</span>
