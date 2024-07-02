@@ -6,7 +6,9 @@
     <div class="flex h-[600px] items-center justify-center bg-slate-100">
       <h1>Hero</h1>
     </div>
-    <h1 class="my-10 text-center">Parcourez notre catalogue produit</h1>
+    <h1 class="my-10 text-center uppercase">
+      Parcourez notre catalogue produit
+    </h1>
     <div class="mx-10 grid grid-cols-2 gap-[55px] border px-10">
       <template
         v-for="card in [

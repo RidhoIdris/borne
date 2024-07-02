@@ -9,7 +9,7 @@ const props = defineProps({
 
 <template>
   <div class="flex items-center gap-[5px]">
-    <h1>{{ props.title }}</h1>
+    <h1 class="uppercase">{{ props.title }}</h1>
     <NuxtImg
       width="86"
       height="20"

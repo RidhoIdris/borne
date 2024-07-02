@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std";
+  src:
+    url("~/assets/fonts/itc/ITCAvantGardeStd-BkCnObl.woff2") format("woff2"),
+    url("~/assets/fonts/itc/ITCAvantGardeStd-BkCnObl.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std";
+  src:
+    url("~/assets/fonts/itc/ITCAvantGardeStd-BoldObl.woff2") format("woff2"),
+    url("~/assets/fonts/itc/ITCAvantGardeStd-BoldObl.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std";
+  src:
+    url("~/assets/fonts/itc/ITCAvantGardeStd-BkObl.woff2") format("woff2"),
+    url("~/assets/fonts/itc/ITCAvantGardeStd-BkObl.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std";
+  src:
+    url("~/assets/fonts/itc/ITCAvantGardeStd-BoldCnObl.woff2") format("woff2"),
+    url("~/assets/fonts/itc/ITCAvantGardeStd-BoldCnObl.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std";
+  src:
+    url("~/assets/fonts/itc/ITCAvantGardeStd-DemiObl.woff2") format("woff2"),
+    url("~/assets/fonts/itc/ITCAvantGardeStd-DemiObl.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std Extra Light Condensed";
+  src:
+    url("~/assets/fonts/itc/ITCAvantGardeStd-XLtCn.woff2") format("woff2"),
+    url("~/assets/fonts/itc/ITCAvantGardeStd-XLtCn.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std";
+  src:
+    url("~/assets/fonts/itc/ITCAvantGardeStd-DemiCnObl.woff2") format("woff2"),
+    url("~/assets/fonts/itc/ITCAvantGardeStd-DemiCnObl.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std";
+  src:
+    url("~/assets/fonts/itc/ITCAvantGardeStd-MdObl.woff2") format("woff2"),
+    url("~/assets/fonts/itc/ITCAvantGardeStd-MdObl.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std";
+  src:
+    url("~/assets/fonts/itc/ITCAvantGardeStd-MdCnObl.woff2") format("woff2"),
+    url("~/assets/fonts/itc/ITCAvantGardeStd-MdCnObl.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std";
+  src:
+    url("~/assets/fonts/itc/ITCAvantGardeStd-XLtCnObl.woff2") format("woff2"),
+    url("~/assets/fonts/itc/ITCAvantGardeStd-XLtCnObl.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}

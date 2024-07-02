@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import defaultTheme from "tailwindcss/defaultTheme";
 export default {
   content: [
     "./components/**/*.{js,vue,ts}",
@@ -11,6 +12,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        itc: ['"ITC Avant Garde Gothic Pro"', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         primary: "rgb(var(--primary))",
         "primary-inverse": "rgb(var(--primary-inverse))",
