@@ -3,6 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+h1 {
+  @apply text-[40px] font-bold leading-[48px] text-current-text;
+}
+h2 {
+  @apply text-[32px] font-semibold leading-[38.4px] text-current-text;
+}
+
 :root {
   --primary-50: 236 253 245;
   --primary-100: 209 250 229;

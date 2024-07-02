@@ -44,6 +44,16 @@ export default {
         "surface-800": "rgb(var(--surface-800))",
         "surface-900": "rgb(var(--surface-900))",
         "surface-950": "rgb(var(--surface-950))",
+        "current-text": "#313131",
+        red: "#D90000",
+        green: "#22C55E",
+      },
+      backgroundImage: {
+        filterBorder:
+          "linear-gradient(180deg, rgba(225, 225, 225, 0) 17.5%, #E1E1E1 100%)",
+      },
+      boxShadow: {
+        productCard: "0px 4px 9px 0px #00000033",
       },
       keyframes: {
         scaleUp: {

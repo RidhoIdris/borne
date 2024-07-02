@@ -1,10 +1,10 @@
 <template>
   <div
-    class="flex h-[68px] items-center justify-between border-b-4 border-primary px-10 py-4"
+    class="sticky top-0 z-20 flex h-[68px] items-center justify-between border-b-4 border-primary bg-white px-10 py-4 shadow-[0px_4px_9px_0px_#00000033]"
   >
-    <div>
+    <NuxtLink to="/">
       <Image src="/logo-text.png" class="w-[320px]" />
-    </div>
+    </NuxtLink>
     <div class="flex items-center gap-10">
       <NuxtIcon name="search" class="cursor-pointer text-[34px]" />
       <NuxtIcon name="cart" class="cursor-pointer text-[34px]" />

@@ -10,7 +10,7 @@ export default {
 
             // Size
             {
-                'h-full w-80': props.position == 'left' || props.position == 'right',
+                'h-full w-[500px]': props.position == 'left' || props.position == 'right',
                 'h-auto w-full': props.position == 'top' || props.position == 'bottom'
             },
 
@@ -19,8 +19,8 @@ export default {
             'shadow-lg',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-900',
-            'text-surface-700 dark:text-white/80',
+            'bg-white',
+            'text-current-text',
             'dark:border-surface-700',
 
             // Transitions
@@ -38,11 +38,11 @@ export default {
             'shrink-0',
 
             // Spacing
-            'p-[1.125rem]',
+            'p-[30px]',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-900',
-            'text-surface-700 dark:text-surface-0/80'
+            'bg-white',
+            'text-current-text'
         ]
     },
     title: {
@@ -97,7 +97,7 @@ export default {
     content: {
         class: [
             // Spacing and Size
-            'p-[1.125rem]',
+            'p-[30px]',
             'pt-0',
             'h-full',
             'w-full',
