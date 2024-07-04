@@ -4,7 +4,7 @@
   <!-- Hero -->
   <div>
     <div class="flex h-[600px] items-center justify-center bg-slate-100">
-      <h1>Hero</h1>
+      <HomeHero />
     </div>
     <h1 class="my-10 text-center uppercase">
       Parcourez notre catalogue produit

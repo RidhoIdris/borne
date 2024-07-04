@@ -14,6 +14,9 @@ dependencies:
   primevue:
     specifier: 4.0.0-rc.2
     version: 4.0.0-rc.2(vue@3.4.29)
+  swiper:
+    specifier: ^11.1.4
+    version: 11.1.4
   vue:
     specifier: ^3.4.29
     version: 3.4.29(typescript@5.5.2)
@@ -7837,6 +7840,11 @@ packages:
       css-what: 6.1.0
       csso: 5.0.5
       picocolors: 1.0.1
+
+  /swiper@11.1.4:
+    resolution: {integrity: sha512-1n7kbYJB2dFEpUHRFszq7gys/ofIBrMNibwTiMvPHwneKND/t9kImnHt6CfGPScMHgI+dWMbGTycCKGMoOO1KA==}
+    engines: {node: '>= 4.7.0'}
+    dev: false
 
   /synckit@0.8.8:
     resolution: {integrity: sha512-HwOKAP7Wc5aRGYdKH+dw0PRRpbO841v2DENBtjnR5HFWoiNByAl7vrx3p0G/rCyYXQsrxqtX48TImFtPcIHSpQ==}

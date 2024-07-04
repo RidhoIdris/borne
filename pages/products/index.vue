@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { slugify } from "~/libs/helpers";
+</script>
+
 <template>
   <div class="p-10">
     <div class="flex items-center justify-between">
@@ -24,13 +28,16 @@
               </p>
             </div>
             <h3 class="py-5 text-center text-2xl font-semibold">59,90 €</h3>
-            <div class="w-full">
+            <NuxtLink
+              :href="'products/' + slugify('Box Centaurus M200 Lost Vape')"
+              class="w-full"
+            >
               <UiButton
                 class="w-full border-primary text-primary"
                 label="Voir le produit"
                 icon="chevron-right"
               />
-            </div>
+            </NuxtLink>
           </div>
         </div>
       </template>
