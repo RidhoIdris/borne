@@ -51,6 +51,7 @@ export default {
         "current-text": "#313131",
         red: "#D90000",
         green: "#22C55E",
+        "black-vapo": "#0E0E0E",
       },
       backgroundImage: {
         filterBorder:
