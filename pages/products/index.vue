@@ -1,18 +1,22 @@
 <script setup lang="ts">
 import { slugify } from "~/libs/helpers";
+
+const route = useRoute();
+const collection = computed(() => {
+  const collectionQuery = route.query.collection;
+  // If collectionQuery is an array, use the first element, otherwise use it directly
+  return Array.isArray(collectionQuery) ? collectionQuery[0] : collectionQuery;
+});
 </script>
 
 <template>
   <div class="p-10">
     <div class="flex items-center justify-between">
-      <UiTitle title="Cigarette électronique" />
+      <UiTitle :title="collection ?? ''" />
       <UiFilter />
     </div>
     <div class="mt-10 grid grid-cols-3 gap-x-5 gap-y-10">
-      <template
-        v-for="product in Array.from({ length: 12 }, (_, i) => i + 1)"
-        :key="product"
-      >
+      <template v-for="product in 12" :key="product">
         <div class="overflow-hidden rounded-[32px] bg-white shadow-productCard">
           <NuxtImg
             width="320"

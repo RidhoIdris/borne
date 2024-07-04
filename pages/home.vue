@@ -1,4 +1,23 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const collections = [
+  {
+    tile: "Cigarettes electroniques",
+    icon: "accessoires",
+  },
+  {
+    tile: "E-liquides",
+    icon: "liquides",
+  },
+  {
+    tile: "DIY",
+    icon: "diy",
+  },
+  {
+    tile: "Accessoires",
+    icon: "accessoires",
+  },
+];
+</script>
 
 <template>
   <!-- Hero -->
@@ -9,21 +28,24 @@
     <h1 class="my-10 text-center uppercase">
       Parcourez notre catalogue produit
     </h1>
-    <div class="mx-10 grid grid-cols-2 gap-[55px] border px-10">
+    <div class="mx-10 grid grid-cols-2 gap-[55px] px-10">
       <template
-        v-for="card in [
-          'Cigarettes electroniques',
-          'E-liquides',
-          'DIY',
-          'Accessoires',
-        ]"
-        :key="card"
+        v-for="(collection, collectionsIdx) in collections"
+        :key="collectionsIdx"
       >
         <NuxtLink
-          href="/products"
-          class="flex h-[428px] w-[428px] items-center justify-center border-4 border-primary"
+          :href="'/products?collection=' + collection.tile"
+          class="flex h-[428px] w-[428px] flex-col items-center justify-center relative"
         >
-          <p>{{ card }}</p>
+          <img
+            src="/home/collections-bg.png"
+            class="w-full h-full absolute inset-0 z-0"
+          />
+          <NuxtIcon
+            class="relative z-10 text-primary text-[86px]"
+            :name="collection.icon"
+          />
+          <h1 class="relative z-10 text-center">{{ collection.tile }}</h1>
         </NuxtLink>
       </template>
     </div>
