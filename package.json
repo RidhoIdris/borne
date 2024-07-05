@@ -12,10 +12,13 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.22",
+    "clsx": "^2.1.1",
     "nuxt": "^3.12.2",
     "primeicons": "^7.0.0",
     "primevue": "4.0.0-rc.2",
     "swiper": "^11.1.4",
+    "tailwind-merge": "^2.3.0",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
   },

@@ -11,7 +11,7 @@ export default {
             { 'first:ml-0 ml-[-1px]': parent.instance.$name == 'InputGroup' && !props.showButtons },
 
             // Color and Background
-            { 'bg-surface-0 dark:bg-surface-950': !props.disabled },
+            { 'bg-white': !props.disabled },
 
             'border',
             { 'dark:border-surface-700': parent.instance.$name != 'InputGroup' },
@@ -49,8 +49,8 @@ export default {
             // Color and Background
             'bg-transparent',
             'border-0',
-            { 'text-surface-800 dark:text-white/80': props.modelValue != undefined, 'text-surface-400 dark:text-surface-500': props.modelValue == undefined },
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
+            { 'text-current-text': props.modelValue != undefined, 'text-surface-400 dark:text-surface-500': props.modelValue == undefined },
+            'placeholder:text-border-grey',
 
             // Sizing and Spacing
             'w-[1%]',

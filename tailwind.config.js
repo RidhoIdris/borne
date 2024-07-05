@@ -15,6 +15,9 @@ export default {
       fontFamily: {
         itc: ['"ITC Avant Garde Gothic Pro"', ...defaultTheme.fontFamily.sans],
       },
+      spacing: {
+        "10px": "10px",
+      },
       colors: {
         primary: "rgb(var(--primary))",
         "primary-inverse": "rgb(var(--primary-inverse))",
@@ -51,7 +54,11 @@ export default {
         "current-text": "#313131",
         red: "#D90000",
         green: "#22C55E",
+        orange: "#F57212",
         "black-vapo": "#0E0E0E",
+        "anthracite-grey": "#464644",
+        "light-grey": "#C8C8C7",
+        "border-grey": "#939393",
       },
       backgroundImage: {
         filterBorder:

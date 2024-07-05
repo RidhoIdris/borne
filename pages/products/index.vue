@@ -2,11 +2,7 @@
 import { slugify } from "~/libs/helpers";
 
 const route = useRoute();
-const collection = computed(() => {
-  const collectionQuery = route.query.collection;
-  // If collectionQuery is an array, use the first element, otherwise use it directly
-  return Array.isArray(collectionQuery) ? collectionQuery[0] : collectionQuery;
-});
+const collection = route.query.collection as string;
 </script>
 
 <template>
