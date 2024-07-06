@@ -56,6 +56,7 @@ export default {
         green: "#22C55E",
         orange: "#F57212",
         "black-vapo": "#0E0E0E",
+        "purple-vapo": "#793282",
         "anthracite-grey": "#464644",
         "light-grey": "#C8C8C7",
         "border-grey": "#939393",

@@ -20,5 +20,7 @@ const router = useRouter();
       <ProductsGalery />
       <ProductsDescriptions />
     </div>
+    <ProductsAssociated />
+    <ProductsFeatures />
   </div>
 </template>
