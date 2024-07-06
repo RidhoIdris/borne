@@ -7,11 +7,10 @@ export default {
 
             // Shape and Size
             'border-0',
-            'h-5',
-            'rounded-md',
+            'h-2',
 
             // Colors
-            'bg-surface-100 dark:bg-surface-800'
+            'bg-[#F3F3F3]'
         ]
     },
     value: ({ props }) => ({

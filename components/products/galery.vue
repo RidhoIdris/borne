@@ -23,6 +23,7 @@ const swiperThumbsRef = ref<SwiperCore>();
       >
         <SwiperSlide v-for="image in 8" :key="image">
           <Image
+            preview
             class="w-full h-full"
             image-class="object-contain w-full h-full"
             src="/products/product-1.jpg"

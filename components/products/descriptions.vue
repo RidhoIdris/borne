@@ -16,8 +16,8 @@ const qty = ref([
 <template>
   <div>
     <div class="flex items-center justify-between">
-      <h2 class="text-orange">Sur commande</h2>
-      <h1 class="font-bold">59,90 €</h1>
+      <h2 class="text-orange leading-[0.95]">Sur commande</h2>
+      <h1 class="font-bold leading-[0]">59,90 €</h1>
     </div>
     <div class="mx-auto w-[124px] h-0.5 bg-light-grey my-5"></div>
     <div class="flex flex-col gap-5">

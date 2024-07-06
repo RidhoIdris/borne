@@ -7,7 +7,9 @@
     </NuxtLink>
     <div class="flex items-center gap-10">
       <NuxtIcon name="search" class="cursor-pointer text-[34px]" />
-      <NuxtIcon name="cart" class="cursor-pointer text-[34px]" />
+      <NuxtLink href="/checkout">
+        <NuxtIcon name="cart" class="cursor-pointer text-[34px]" />
+      </NuxtLink>
       <NuxtIcon name="menu" class="cursor-pointer text-[34px]" />
     </div>
   </div>
