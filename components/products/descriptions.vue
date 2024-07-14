@@ -43,6 +43,7 @@ const qty = ref([
         label="Ajouter au panier"
         icon="cart"
         icon-class="text-2xl"
+        size="large"
         class="w-full border-red text-red font-semibold text-2xl"
       />
     </div>
