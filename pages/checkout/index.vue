@@ -78,21 +78,7 @@ const activeStep = ref(1);
             <CheckoutPanier :activate-callback="activateCallback" />
           </StepPanel>
           <StepPanel v-slot="{ activateCallback }" :value="2">
-            <UiTitle title="Identification" />
-            <div class="flex pt-6 justify-between">
-              <Button
-                label="Back"
-                icon="pi pi-arrow-left"
-                icon-pos="left"
-                @click="activateCallback(1)"
-              />
-              <Button
-                label="Next"
-                icon="pi pi-arrow-right"
-                icon-pos="right"
-                @click="activateCallback(3)"
-              />
-            </div>
+            <CheckoutIdentification :activate-callback="activateCallback" />
           </StepPanel>
           <StepPanel v-slot="{ activateCallback }" :value="3">
             <UiTitle title="Création de ticket" />
