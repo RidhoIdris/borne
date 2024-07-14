@@ -9,7 +9,7 @@ defineProps<{
   <div
     class="mt-10 gap-[60px] max-w-2xl mx-auto flex items-center flex-col justify-center text-center"
   >
-    <NuxtIcon name="clients" class="text-[180px]" :filled="true" />
+    <NuxtIcon name="clients" class="text-[180px] mt-[160px]" :filled="true" />
     <h3 class="">Veuillez renseigner votre prénom</h3>
     <InputText
       placeholder="Prénom"

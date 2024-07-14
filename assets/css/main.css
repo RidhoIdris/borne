@@ -57,3 +57,7 @@ h3 {
   --primary-highlight-inverse: var(--surface-0);
   --primary-highlight-hover-opacity: 0.3;
 }
+
+.nuxt-icon svg {
+  margin-bottom: 0 !important;
+}

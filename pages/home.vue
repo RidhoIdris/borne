@@ -21,7 +21,7 @@ const collections = [
 
 <template>
   <!-- Hero -->
-  <div class="min-h-screen h-full flex flex-col justify-between">
+  <div class="min-h-[calc(100vh-68px)] h-full flex flex-col justify-between">
     <div>
       <div class="flex h-[600px] items-center justify-center bg-slate-100">
         <HomeHero />

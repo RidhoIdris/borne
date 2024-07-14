@@ -3,7 +3,7 @@ const activeStep = ref(1);
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col justify-between">
+  <div class="min-h-[calc(100vh-68px)] flex flex-col justify-between">
     <div class="p-10">
       <Stepper v-model:value="activeStep">
         <StepList class="flex justify-between relative">
@@ -81,15 +81,7 @@ const activeStep = ref(1);
             <CheckoutIdentification :activate-callback="activateCallback" />
           </StepPanel>
           <StepPanel v-slot="{ activateCallback }" :value="3">
-            <UiTitle title="Création de ticket" />
-            <div class="flex pt-6 justify-start">
-              <Button
-                label="Back"
-                icon="pi pi-arrow-left"
-                icon-pos="left"
-                @click="activateCallback(2)"
-              />
-            </div>
+            <CheckoutTicket :activate-callback="activateCallback" />
           </StepPanel>
         </StepPanels>
       </Stepper>

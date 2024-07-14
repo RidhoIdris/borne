@@ -58,7 +58,11 @@ const quantity = ref([
     v-if="isEmpty"
     class="mt-10 flex items-center flex-col justify-center text-center"
   >
-    <NuxtIcon name="empty-panier" class="text-[180px]" :filled="true" />
+    <NuxtIcon
+      name="empty-panier"
+      class="text-[180px] mt-[160px]"
+      :filled="true"
+    />
     <h3 class="my-[60px]">Votre panier est vide pour le moment...</h3>
     <UiButton
       label="Commencer vos achats"
