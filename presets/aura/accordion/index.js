@@ -1,7 +1,7 @@
 export default {
     accordiontab: {
         root: {
-            class: ['mb-0', 'border-b border-surface-200 dark:border-surface-700']
+            class: ['p-5 border-b border-light-grey']
         },
         header: ({ props }) => ({
             class: [
@@ -43,22 +43,15 @@ export default {
             ]
         },
         headerIcon: ({ context }) => ({
-            class: ['inline-block ml-2', { 'text-surface-900 dark:text-surface-0': context.active }]
+            class: ['inline-block ml-2 text-current-text']
         }),
         headerTitle: {
-            class: 'leading-none'
+            class: 'font-semibold text-current-text'
         },
         content: {
             class: [
                 // Spacing
-                'p-[1.125rem] pt-0',
-
-                //Shape
-                'border-0 rounded-none',
-
-                // Color
-                'bg-surface-0 dark:bg-surface-900',
-                'text-surface-600 dark:text-surface-0/70'
+                'pt-5',
             ]
         },
         transition: {
