@@ -8,6 +8,8 @@ const emit = defineEmits<{
   (e: "close"): void;
 }>();
 
+const isShowKeyboard = ref(false);
+
 const disableScroll = () => {
   document.body.style.overflow = "hidden";
   document.body.style.paddingRight = `${window.innerWidth - document.documentElement.clientWidth}px`;
@@ -87,7 +89,7 @@ const highlightText = (text: string): string => {
           <div class="max-w-[680px] w-full mx-auto mt-[200px]">
             <div class="relative w-full">
               <InputText
-                v-model="searchTerm"
+                :value="searchTerm"
                 placeholder="Rechercher"
                 :class="[
                   'w-full pr-[70px] text-2xl font-medium placeholder:italic rounded-full',
@@ -96,6 +98,8 @@ const highlightText = (text: string): string => {
                     '!border-primary': searchTerm,
                   },
                 ]"
+                @input="(e: any) => (searchTerm = e.target.value)"
+                @focus="isShowKeyboard = true"
               />
               <button
                 :class="[
@@ -152,4 +156,11 @@ const highlightText = (text: string): string => {
       </div>
     </transition>
   </Teleport>
+  <Sidebar
+    v-model:visible="isShowKeyboard"
+    :show-close-icon="false"
+    position="bottom"
+  >
+    <UiKeyboard :input="searchTerm" @on-change="(e) => (searchTerm = e)" />
+  </Sidebar>
 </template>

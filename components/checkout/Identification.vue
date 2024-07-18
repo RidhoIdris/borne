@@ -3,6 +3,9 @@
 defineProps<{
   activateCallback: any;
 }>();
+const isShowKeyboard = ref(false);
+
+const input = ref("");
 </script>
 <template>
   <UiTitle title="Identification" />
@@ -12,8 +15,10 @@ defineProps<{
     <NuxtIcon name="clients" class="text-[180px] mt-[160px]" :filled="true" />
     <h3 class="">Veuillez renseigner votre prénom</h3>
     <InputText
+      v-model="input"
       placeholder="Prénom"
       class="w-full placeholder:italic rounded-full"
+      @focus="isShowKeyboard = true"
     />
     <UiButton
       label="Valider votre identifiant"
@@ -22,4 +27,11 @@ defineProps<{
       @click="activateCallback(3)"
     />
   </div>
+  <Sidebar
+    v-model:visible="isShowKeyboard"
+    :show-close-icon="false"
+    position="bottom"
+  >
+    <UiKeyboard :input="input" @on-change="(e) => (input = e)" />
+  </Sidebar>
 </template>

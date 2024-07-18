@@ -11,7 +11,7 @@ export default {
             // Size
             {
                 'h-full w-[500px]': props.position == 'left' || props.position == 'right',
-                'h-auto w-full': props.position == 'top' || props.position == 'bottom'
+                'h-auto w-full max-w-[1080px]': props.position == 'top' || props.position == 'bottom'
             },
 
             // Shape
@@ -20,6 +20,9 @@ export default {
 
             // Colors
             'bg-white',
+            {
+                'bg-white/80': props.position == 'bottom'
+            },
             'text-current-text',
             'dark:border-surface-700',
 
@@ -31,20 +34,18 @@ export default {
             'pointer-events-auto'
         ]
     }),
-    header: {
+    header: ({ props }) => ({
         class: [
             // Flexbox and Alignment
             'flex items-center justify-between',
             'shrink-0',
-
-            // Spacing
-            'p-[30px]',
-
-            // Colors
-            'bg-white',
+            {
+                'bg-white p-[30px]': props.position != 'bottom',
+                'bg-white/80 p-4': props.position == 'bottom',
+            },
             'text-current-text'
         ]
-    },
+    }),
     title: {
         class: ['font-semibold text-xl']
     },
@@ -94,28 +95,32 @@ export default {
             'h-4'
         ]
     },
-    content: {
+    content: ({ props }) => ({
         class: [
             // Spacing and Size
-            'p-[30px]',
+            {
+                'bg-white p-[30px]': props.position != 'bottom',
+                'bg-white/80 p-4': props.position == 'bottom',
+            },
             'pt-0',
             'h-full',
             'w-full',
-
+    
             // Growth and Overflow
             'grow',
             'overflow-y-auto'
         ]
-    },
+    }),
     mask: ({ props }) => ({
         class: [
             // Transitions
             'transition-all',
             'duration-300',
             { 'p-5': !props.position == 'full' },
-
+            
             // Background and Effects
-            { 'has-[.mask-active]:bg-transparent bg-black/40': props.modal }
+            { 'has-[.mask-active]:bg-transparent bg-black/40': props.modal },
+            { 'bg-transparent': props.position == 'bottom' },
         ]
     }),
     transition: ({ props }) => {

@@ -34,11 +34,16 @@ export default {
             // Colors
             {
                 'border-[#939393]': !context.checked && !props.invalid,
-                'bg-white ': !context.checked && !props.invalid && !props.disabled,
-                'border-primary bg-primary': context.checked,
-                [props.value] : props.name === 'Couleurs',
-                'border-none' : props.name === 'Couleurs',
-                'bg-transparent border-none' : props.name === 'Couleurs' && context.checked,
+                // 'bg-white ': !context.checked && !props.invalid && !props.disabled,
+                'border-primary bg-primary': context.checked && props.name !== 'Couleurs',
+                [props.value]: context.checked && props.name === 'Couleurs',
+                'border-none' : context.checked && props.name === 'Couleurs',
+
+                // 'bg-transparent border-none' : props.name === 'Couleurs' && context.checked,
+            },
+            {
+                [props.value] : !context.checked && props.name === 'Couleurs',
+                'border-none' : !context.checked && props.name === 'Couleurs',
             },
 
             // Invalid State
