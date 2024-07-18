@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const isShowMenu = ref(false);
+const isShowSearch = ref(false);
 </script>
 <template>
   <div class="fixed max-w-[1080px] w-full left-1/2 -translate-x-1/2 top-0 z-20">
@@ -10,7 +11,9 @@ const isShowMenu = ref(false);
         <Image src="/logo-text.png" class="w-[320px]" />
       </NuxtLink>
       <div class="flex items-center gap-10">
-        <NuxtIcon name="search" class="cursor-pointer text-[34px]" />
+        <button @click="isShowSearch = !isShowSearch">
+          <NuxtIcon name="search" class="cursor-pointer text-[34px]" />
+        </button>
         <NuxtLink href="/checkout">
           <NuxtIcon name="cart" class="cursor-pointer text-[34px]" />
         </NuxtLink>
@@ -28,5 +31,6 @@ const isShowMenu = ref(false);
         :set-is-show-menu="(e) => (isShowMenu = e)"
       />
     </div>
+    <UiSearch :is-show-search="isShowSearch" @close="isShowSearch = false" />
   </div>
 </template>
