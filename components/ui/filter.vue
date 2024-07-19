@@ -2,74 +2,21 @@
 const visible = ref(false);
 const activeTab = ref<number | null>(null);
 
-const filters = reactive([
-  {
-    title: "Marques",
-    type: "checkbox",
-    model: "",
-    options: [
-      { label: "Aspire", value: "aspire" },
-      { label: "Bp mods", value: "bpmods" },
-      { label: "creavap", value: "creavap" },
-      { label: "Da one", value: "daone" },
-      { label: "Dotmod", value: "dotmod" },
-    ],
-  },
-  {
-    title: "Prix",
-    type: "range",
-    model: [25, 150],
-    options: [],
-  },
-  {
-    title: "Catégories",
-    type: "checkbox",
-    model: "",
-    options: [
-      { label: "Aspire", value: "aspire" },
-      { label: "Bp mods", value: "bpmods" },
-      { label: "creavap", value: "creavap" },
-      { label: "Da one", value: "daone" },
-      { label: "Dotmod", value: "dotmod" },
-    ],
-  },
-  {
-    title: "Saveurs",
-    type: "checkbox",
-    model: "",
-    options: [
-      { label: "Aspire", value: "aspire" },
-      { label: "Bp mods", value: "bpmods" },
-      { label: "creavap", value: "creavap" },
-      { label: "Da one", value: "daone" },
-      { label: "Dotmod", value: "dotmod" },
-    ],
-  },
-  {
-    title: "Taux de nicotine",
-    type: "checkbox",
-    model: "",
-    options: [
-      { label: "Aspire", value: "aspire" },
-      { label: "Bp mods", value: "bpmods" },
-      { label: "creavap", value: "creavap" },
-      { label: "Da one", value: "daone" },
-      { label: "Dotmod", value: "dotmod" },
-    ],
-  },
-  {
-    title: "Couleurs",
-    type: "checkbox",
-    model: "",
-    options: [
-      { label: "Orange", value: "bg-[#F57212]" },
-      { label: "Marron", value: "bg-[#A16020]" },
-      { label: "Jaune", value: "bg-[#FFD700]" },
-      { label: "Rouge", value: "bg-[#D90000]" },
-      { label: "Vert", value: "bg-[#22C55E]" },
-    ],
-  },
-]);
+const filterStore = useFilterStore();
+
+const resetFilter = () => {
+  filterStore.filters = defaultFilters;
+};
+
+const applyFilter = () => {
+  filterStore.filtered = filterStore.filters.filter(
+    (filterItem) =>
+      !defaultFilters.some(
+        (defaultItem) =>
+          JSON.stringify(defaultItem) === JSON.stringify(filterItem),
+      ),
+  );
+};
 </script>
 <template>
   <div>
@@ -98,7 +45,10 @@ const filters = reactive([
         <div
           class="absolute left-0 top-0 h-[10px] w-full rotate-180 bg-filterBorder"
         ></div>
-        <template v-for="(filter, filterIndex) in filters" :key="filterIndex">
+        <template
+          v-for="(filter, filterIndex) in filterStore.filters"
+          :key="filterIndex"
+        >
           <div class="p-5 border-b border-light-grey">
             <button
               class="flex text-current-text w-full font-semibold items-center justify-between"
@@ -180,14 +130,20 @@ const filters = reactive([
               class="border-red text-red"
               label="Tout effacer"
               icon="trash"
-              @click="visible = !visible"
+              @click="
+                visible = !visible;
+                resetFilter();
+              "
             >
             </UiButton>
             <UiButton
               class="border-green text-green"
               label="Voir les résultats"
               icon="check"
-              @click="visible = !visible"
+              @click="
+                visible = !visible;
+                applyFilter();
+              "
             >
             </UiButton>
           </div>

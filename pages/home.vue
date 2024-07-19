@@ -46,7 +46,9 @@ const collections = [
               class="relative z-10 text-primary text-[86px]"
               :name="collection.icon"
             />
-            <h1 class="relative z-10 text-center">{{ collection.tile }}</h1>
+            <h1 class="relative z-10 text-center uppercase">
+              {{ collection.tile }}
+            </h1>
           </NuxtLink>
         </template>
       </div>

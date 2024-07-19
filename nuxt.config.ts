@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxtjs/eslint-module",
     "nuxt-icons",
     "@nuxt/image",
+    "@pinia/nuxt",
   ],
   postcss: {
     plugins: {

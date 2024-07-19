@@ -13,8 +13,10 @@
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.22",
+    "@pinia/nuxt": "^0.5.1",
     "clsx": "^2.1.1",
     "nuxt": "^3.12.2",
+    "pinia": "^2.1.7",
     "primeicons": "^7.0.0",
     "primevue": "4.0.0-rc.2",
     "simple-keyboard": "^3.7.93",

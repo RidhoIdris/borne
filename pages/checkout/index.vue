@@ -13,7 +13,7 @@ const activeStep = ref(1);
                 class="flex flex-col justify-center items-center w-fit gap-10px"
               >
                 <h3>Panier</h3>
-                <div
+                <button
                   :class="[
                     'rounded-full transition-colors duration-700 size-[46px] relative z-10',
                     {
@@ -22,7 +22,12 @@ const activeStep = ref(1);
                       'delay-500': value <= activeStep,
                     },
                   ]"
-                ></div>
+                  @click="
+                    () => {
+                      value <= activeStep ? (activeStep = 1) : '';
+                    }
+                  "
+                ></button>
               </div>
             </div>
           </Step>
@@ -35,7 +40,7 @@ const activeStep = ref(1);
                 class="flex flex-col w-fit justify-center items-center gap-10px"
               >
                 <h3>Identification</h3>
-                <div
+                <button
                   :class="[
                     'rounded-full transition-colors duration-700 size-[46px] relative z-10',
                     {
@@ -44,7 +49,12 @@ const activeStep = ref(1);
                       'delay-500': value <= activeStep,
                     },
                   ]"
-                ></div>
+                  @click="
+                    () => {
+                      value <= activeStep ? (activeStep = 2) : '';
+                    }
+                  "
+                ></button>
               </div>
             </div>
           </Step>

@@ -5,18 +5,19 @@ export default {
             'inline-flex items-center',
 
             // Spacing
-            'px-3 py-1',
+            'px-5 py-3',
 
             // Shape
-            'rounded-[1.14rem]',
+            'rounded-full',
 
             // Colors
-            'text-surface-700 dark:text-white',
-            'bg-surface-100 dark:bg-surface-700'
+            'text-white',
+            'bg-primary',
+            'h-[38px]'
         ]
     },
     label: {
-        class: 'leading-6 m-0'
+        class: 'text-xl font-semibold m-0'
     },
     icon: {
         class: 'leading-6 mr-2'
@@ -30,10 +31,10 @@ export default {
             'rounded-md leading-6',
 
             // Spacing
-            'ml-[0.375rem]',
+            'ml-[10px] -mt-[3px]',
 
             // Size
-            'w-4 h-4',
+            'size-[18px]',
 
             // Transition
             'transition duration-200 ease-in-out',

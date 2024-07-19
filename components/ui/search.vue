@@ -78,9 +78,7 @@ const highlightText = (text: string): string => {
         v-if="isShowSearch"
         class="bg-current-text/80 backdrop-blur max-w-[1080px] left-1/2 -translate-x-1/2 fixed inset-0 z-30 p-[30px] h-screen w-screen"
       >
-        <div
-          class="border relative flex flex-col overflow-y-auto border-dashed border-primary h-full p-5"
-        >
+        <div class="relative flex flex-col overflow-y-auto h-full p-5">
           <NuxtIcon
             class="absolute right-5 top-5 cursor-pointer text-white text-[32px] transition-all duration-500 hover:-rotate-180"
             name="close"
@@ -161,6 +159,10 @@ const highlightText = (text: string): string => {
     :show-close-icon="false"
     position="bottom"
   >
-    <UiKeyboard :input="searchTerm" @on-change="(e) => (searchTerm = e)" />
+    <UiKeyboard
+      :input="searchTerm"
+      @on-enter="isShowKeyboard = false"
+      @on-change="(e) => (searchTerm = e)"
+    />
   </Sidebar>
 </template>
