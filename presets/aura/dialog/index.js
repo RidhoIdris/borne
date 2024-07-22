@@ -2,19 +2,19 @@ export default {
     root: ({ state }) => ({
         class: [
             // Shape
-            'rounded-lg',
-            'shadow-lg',
+            'rounded-[25px]',
+            'shadow-[0px_14px_40px_0px_#00000040]',
             'border-0',
 
             // Size
             'max-h-[90vh]',
-            'w-[50vw]',
+            'w-[750px]',
             'm-0',
 
             // Color
-            'bg-surface-0 dark:bg-surface-900',
+            'bg-white',
             '[&:last-child]:border-b',
-            'border-surface-200 dark:border-surface-700',
+            'border-white',
 
             // Transitions
             'transform',
@@ -39,16 +39,13 @@ export default {
             'shrink-0',
 
             // Spacing
-            'p-6',
+            'p-10',
 
             // Shape
-            'rounded-tl-lg',
-            'rounded-tr-lg',
+            'rounded-[25px]',
 
             // Colors
-            'text-surface-700 dark:text-surface-0/80',
-            'border border-b-0',
-            'border-surface-200 dark:border-surface-700'
+            'text-current-text',
         ]
     },
     title: {
@@ -158,9 +155,7 @@ export default {
             },
 
             // Colors
-            'text-surface-700 dark:text-surface-0/80',
-            'border border-t-0 border-b-0',
-            'border-surface-200 dark:border-surface-700',
+            'text-current-text',
 
             // Misc
             'overflow-y-auto'

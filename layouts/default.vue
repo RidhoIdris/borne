@@ -4,6 +4,7 @@
   >
     <UiNavbar />
     <Loading />
+    <AlertDialog />
     <div class="relative z-10 pt-[68px]">
       <slot />
     </div>

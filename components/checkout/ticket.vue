@@ -42,6 +42,16 @@ const cartsData = ref([
     image: "/products/product-1.jpg",
   },
 ]);
+
+const alert = useAlertStore();
+
+const showAlert = () => {
+  alert.show({
+    title: "Création du ticket",
+    message: "Votre panier a bien été transmis en caisse !",
+    icon: "ticket",
+  });
+};
 </script>
 <template>
   <UiTitle title="Identification" />
@@ -88,7 +98,7 @@ const cartsData = ref([
       label="Générer votre commande en caisse"
       icon="ticket"
       class="text-green border-green"
-      @click="activateCallback(3)"
+      @click="showAlert()"
     />
   </div>
 </template>

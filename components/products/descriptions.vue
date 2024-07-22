@@ -5,13 +5,21 @@ const colors = ref([
   { value: "Bleu", text: "Bleu" },
   { value: "Silver", text: "Silver" },
 ]);
-
+const alert = useAlertStore();
 const qty = ref([
   { value: "1", text: "1" },
   { value: "2", text: "2" },
   { value: "3", text: "3" },
   { value: "4", text: "4" },
 ]);
+
+const showAlert = () => {
+  alert.show({
+    title: "Action effectuée",
+    message: "Le produit à été ajouté au panier !",
+    icon: "empty-panier",
+  });
+};
 </script>
 <template>
   <div>
@@ -45,6 +53,7 @@ const qty = ref([
         icon-class="text-2xl"
         size="large"
         class="w-full border-red text-red font-semibold text-2xl"
+        @click="showAlert()"
       />
     </div>
   </div>
