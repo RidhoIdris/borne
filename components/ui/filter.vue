@@ -6,6 +6,7 @@ const filterStore = useFilterStore();
 
 const resetFilter = () => {
   filterStore.filters = defaultFilters;
+  filterStore.filtered = [];
 };
 
 const applyFilter = () => {

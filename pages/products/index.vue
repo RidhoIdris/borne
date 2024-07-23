@@ -29,7 +29,7 @@ const filterStore = useFilterStore();
     <div class="mt-10 grid grid-cols-3 gap-x-5 gap-y-10">
       <template v-for="product in 12" :key="product">
         <NuxtLink
-          :href="'products/' + slugify('Box Centaurus M200 Lost Vape')"
+          :href="'/products/' + slugify('Box Centaurus M200 Lost Vape')"
           class="w-full"
         >
           <div

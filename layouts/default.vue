@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative mx-auto flex min-h-screen w-full max-w-[1080px] flex-col border font-itc"
+    class="relative mx-auto flex h-screen w-full max-w-[1080px] overflow-auto flex-col border font-itc"
   >
     <UiNavbar />
     <Loading />

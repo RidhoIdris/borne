@@ -74,7 +74,9 @@ export const useFilterStore = defineStore("filterStore", {
   // arrow function recommended for full type inference
   state: () => {
     return {
-      filters: defaultFilters,
+      filters: JSON.parse(
+        JSON.stringify(defaultFilters),
+      ) as typeof defaultFilters,
       filtered: [] as any,
     };
   },
